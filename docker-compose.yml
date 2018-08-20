@@ -13,6 +13,8 @@ services:
         image: admin
         container_name: admin
         restart: always
+        volumes:
+            - ./data:/app/config
         environment:
             ME_CONFIG_MONGODB_ADMINUSERNAME: root
             ME_CONFIG_MONGODB_ADMINPASSWORD: example
@@ -23,6 +25,8 @@ services:
         image: main
         container_name: main
         restart: always
+        volumes:
+            - ./data:/app/config
         environment:
             ME_CONFIG_MONGODB_ADMINUSERNAME: root
             ME_CONFIG_MONGODB_ADMINPASSWORD: example
