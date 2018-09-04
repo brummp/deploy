@@ -1,6 +1,10 @@
 module.exports = {
-    URL: 'mongodb://root:example@mongo:27017',
+    // URL: 'mongodb://root:example@mongo:27017',
+    URL: 'mongodb://localhost:27017',
     DATABASE: 'ISInformationPlatform',
+    // service_server: 'http://main:8081',
+    service_server: 'http://localhost:8081',
+
     notice_item_number_a_page: 3,
     post_item_number_a_page: 2,
     forum: [
@@ -66,5 +70,8 @@ module.exports = {
             collection: "notice_work",
             title: "实习信息"
         }
-    ]
+    ],
+    user: {
+        collection: 'user'
+    }
 };
